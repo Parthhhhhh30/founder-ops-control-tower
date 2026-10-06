@@ -35,3 +35,13 @@ Data, documents, receipt references, draft communications and approval identitie
 The complete seeded product has no unresolved credential blocker. The user has confirmed publication of the cloud environment. External web deployment requires a Vercel account and authorized repository connection; optional multi-user Supabase and live drafting prerequisites are documented in DEPLOYMENT.md. No live integration is represented as verified.
 
 The user authorized committing all BACKBONE project files and pushing them to GitHub main on 6 October 2026. Git history and the remote main ref identify the delivered revision. External web deployment has not been performed. The committed revision is validated using typecheck, lint, Vitest, production build and Playwright with a fresh production server.
+
+## Final visual refinement — 6 October 2026
+
+- Increased interface typography at 10px and below by approximately 1px, including sidebar secondary labels, table supporting text, inspector metadata and uppercase labels. Panel dimensions, row padding, navigation and information density are retained.
+- Command Desk now includes a short operational context sentence below its existing title. No hero section was introduced.
+- Persistent synthetic/browser-local/no-external-actions disclosure is a compact environment indicator. The existing live status region still announces operator outcomes independently.
+- Selected table rows use a slightly stronger stone background; selected non-table elements retain their previous treatment. Inspector explanations, rules, source fields, ownership, next actions and audit evidence remain in place.
+- Inspected rendered production UI at 1440, 1512 and 1536px desktop widths with device scale 1, and 390px mobile width. No document overflow, introduced clipping or alignment defects observed. Automated WCAG checks across all seven modules passed.
+- Typecheck, lint, all 33 unit/component tests, production build and all four browser suites passed after refinement. The visual smoke capture now explicitly waits for Command Desk to render before taking its desktop screenshot.
+- Scope is visual presentation and context/disclosure copy only. Domain logic, source data, workflows, information architecture, navigation structure, module composition and interaction model are unchanged.

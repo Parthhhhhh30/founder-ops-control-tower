@@ -47,7 +47,7 @@ const modules = [
     icon: Layers3,
     kicker: "Your operating queue",
     description:
-      "Move the routine. Prepare the sensitive. Escalate with context.",
+      "Operational actions across revenue, people, contracts and company operations.",
   },
   {
     name: "Revenue Ops",
@@ -517,11 +517,13 @@ export function ControlRoom() {
               )}
             </div>
           </div>
-          <div className="notice" role="status" aria-live="polite">
-            {notice ||
-              (!ready
-                ? "Restoring workspace…"
-                : "Demo workspace · changes stay in this browser. No external messages or transactions.")}
+          <div className="demo-status">
+            <span className="environment-indicator">
+              Synthetic demo · browser-local · no external actions
+            </span>
+            <div className="notice" role="status" aria-live="polite">
+              {notice || (!ready ? "Restoring workspace…" : "")}
+            </div>
           </div>
           {module === "Command Desk" && (
             <>

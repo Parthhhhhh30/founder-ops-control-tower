@@ -30,3 +30,7 @@ Read docs/BUILD_STATUS.md for verified scope and docs/DEPLOYMENT.md for publicat
 ## GitHub delivery
 
 The user explicitly authorized committing all project changes, pushing to main, verifying the remote application/documentation tree, and rerunning the full suite from the committed state. Preserve remote work with a normal fast-forward push; never force-push. Verify the remote commit and tree using a fresh Git fetch into separate temporary metadata. Run the full suite with CI=1 so Playwright starts a fresh production server rather than reusing a development process. Generated dependencies, build outputs, browser artifacts, local credentials and next-env.d.ts remain ignored.
+
+## Final visual refinement
+
+The approved visual system was refined within the user's narrow scope: approximately +1px small typography, concise Command Desk context, compact persistent demo indicator and slightly stronger selected table background. Preserved the existing inspector, founder banner, inline signals, navigation, data, deterministic rules and workflows. Production rendering inspected at 1440/1512/1536px desktop with normal zoom and 390px mobile. Corrected the visual screenshot capture to wait for the rendered page. Full validation passes: typecheck, lint, 33 unit/component tests, production build and four browser suites including automated accessibility checks. BUILD_STATUS and UX_SPEC record the resulting presentation. Commit and push this refinement to main using normal fast-forward delivery.

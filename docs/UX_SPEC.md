@@ -1,0 +1,6 @@
+# Operations control room
+
+Graphite persistent navigation, warm ivory workspace, orange attention, red escalation, teal verified resolution. Precise dense typography, monospace identifiers and amounts, 4–8px corners, subtle borders. Lucide icons. No hero, KPI card grid, AI theatre, purple or glass.
+Command strip with demo date and synthetic notice. Command Desk offers operator/founder modes, search and judgment filters, queue and right inspector. Inspector exposes reasons, source fields, dependencies, ownership and audit history without leaving a module.
+Revenue uses ledger/ageing and drafting; People pipeline plus actionable onboarding checklist; Contracts register plus side-by-side synthetic clause differences; Company scheduled logistics plus tabular inventory; Brief is a printable editorial memo; Forward Look is a dated exception timeline.
+Keyboard-operable controls, labeled fields, visible focus, text statuses, semantic tables and responsive single-column inspector below desktop breakpoint. Explicit human approval for sensitive closure; manual payment recording with confirmation; drafts cannot send. Empty states explain filter results. Saved status announces locally persisted updates.

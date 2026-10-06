@@ -1,0 +1,203 @@
+export type Mode = "ACT" | "REVIEW" | "ESCALATE";
+export type Area =
+  "Revenue" | "People" | "Contracts" | "Compliance" | "Company";
+export type AuditEvent = {
+  id: string;
+  recordId: string;
+  at: string;
+  actor: string;
+  action: string;
+  evidence: string;
+};
+export type Judgment = {
+  mode: Mode;
+  rule_id: string;
+  reason: string;
+  sourceFields: Record<string, string | number | boolean>;
+  severity: "routine" | "attention" | "material";
+  owner: string;
+  decisionOwner?: string;
+  nextAction: string;
+  dueDate: string;
+  auditEvidence: string;
+};
+export type OperationalItem = Judgment & {
+  id: string;
+  sourceId: string;
+  title: string;
+  area: Area;
+  priority: string;
+  financialImpact?: number;
+  externalDependency: string;
+  risk: string;
+  status: "open" | "closed";
+  createdAt: string;
+  updatedAt: string;
+  auditEvents: AuditEvent[];
+};
+export type Invoice = {
+  id: string;
+  number: string;
+  client: string;
+  amount: number;
+  currency: string;
+  issueDate: string;
+  dueDate: string;
+  paymentStatus: "unpaid" | "paid";
+  lastContact: string;
+  nextFollowUp: string;
+  dispute: boolean;
+  amountDiscrepancy: boolean;
+  accountantDependency: boolean;
+  notes: string;
+  reconciled: boolean;
+};
+export type HiringEvent = {
+  id: string;
+  candidateId: string;
+  at: string;
+  interviewers: string[];
+  availability: string;
+  scheduled: boolean;
+  feedbackReceived: string[];
+};
+export type Candidate = {
+  id: string;
+  name: string;
+  role: string;
+  stage: "Screen" | "Interview" | "Decision";
+  screenStatus: string;
+  decisionDate: string;
+  decisionOwner: string;
+  communicationStatus: string;
+  travelRequired: boolean;
+  nextAction: string;
+};
+export type OnboardingChecklistItem = {
+  id: string;
+  label: string;
+  mandatory: boolean;
+  complete: boolean;
+};
+export type NewStarter = {
+  id: string;
+  name: string;
+  role: string;
+  startDate: string;
+  manager: string;
+  checklist: OnboardingChecklistItem[];
+};
+export type ContractRecord = {
+  id: string;
+  counterparty: string;
+  type: string;
+  template: string;
+  owner: string;
+  status: string;
+  signatory: string;
+  effectiveDate: string;
+  renewalDate: string;
+  nonStandard: boolean;
+  humanReviewRequired: boolean;
+  documentLocation: string;
+  notes: string;
+  clauses: { title: string; standard: string; incoming: string }[];
+};
+export type RightToWorkCheck = {
+  id: string;
+  employee: string;
+  evidenceReceived: boolean;
+  checkDate: string;
+  expiryDate: string;
+  followUpDate: string;
+  reviewer: string;
+  status: string;
+};
+export type ClientEvent = {
+  id: string;
+  title: string;
+  attendees: string[];
+  date: string;
+  time: string;
+  place: string;
+  travel: string;
+  dietary: string;
+  materials: boolean;
+  ndaComplete: boolean;
+  owner: string;
+  calendarConfirmed: boolean;
+  openActions: string[];
+  founderAttention: boolean;
+};
+export type Asset = {
+  id: string;
+  name: string;
+  assignedUser: string;
+  supplier: string;
+  cost: number;
+  purchaseDate: string;
+  warranty: string;
+  condition: string;
+  replacementState: string;
+};
+export type StockItem = {
+  id: string;
+  name: string;
+  quantity: number;
+  minimum: number;
+  supplier: string;
+  reorderDate: string;
+  approvedSupplier: boolean;
+  approvedBudget: boolean;
+  unusual: boolean;
+};
+export type VendorTask = {
+  id: string;
+  title: string;
+  supplier: string;
+  owner: string;
+  dueDate: string;
+  approvedSupplier: boolean;
+  approvedBudget: boolean;
+  unusual: boolean;
+  safety: boolean;
+  disruption: boolean;
+  status: string;
+};
+export type FounderDecision = {
+  itemId: string;
+  title: string;
+  decisionOwner: string;
+  reason: string;
+  dueDate: string;
+  nextAction: string;
+};
+export type WeeklyBrief = {
+  date: string;
+  sections: { title: string; lines: string[] }[];
+  decisions: FounderDecision[];
+};
+export type ForwardRisk = {
+  id: string;
+  sourceId: string;
+  date: string;
+  title: string;
+  reason: string;
+  ruleId: string;
+  owner: string;
+};
+export type Closure = { recordId: string; approver: string; evidence: string };
+export type DemoState = {
+  invoices: Invoice[];
+  candidates: Candidate[];
+  hiringEvents: HiringEvent[];
+  starters: NewStarter[];
+  contracts: ContractRecord[];
+  rtw: RightToWorkCheck[];
+  events: ClientEvent[];
+  assets: Asset[];
+  stock: StockItem[];
+  vendors: VendorTask[];
+  audit: AuditEvent[];
+  closures: Closure[];
+};

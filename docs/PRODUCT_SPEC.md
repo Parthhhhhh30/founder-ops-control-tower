@@ -1,0 +1,6 @@
+# BACKBONE — Founder Operations Control System
+
+Independent portfolio prototype, unaffiliated with Artificial Societies and not representative of its operations. All records are explicitly synthetic.
+Turn messy signals into an operating queue: source → deterministic judgment → next action → owner → evidence → human decision when needed → closure. The operator retains responsibility. Founder attention is scarce: NEED FROM FOUNDERS contains only decisions explicitly assigned to a founder, never every escalation.
+Seven areas: Command Desk (queue and inspector), Revenue Ops (ageing ledger and communication drafts), People Ops (pipeline, feedback follow-up and mandatory onboarding), Contracts & Compliance (register, NDA differences and administrative RTW tracking), Company Ops (logistics, assets, stock and vendor work), Weekly Brief (deterministic printable memo), Forward Look (7/14-day dated risks).
+Every judgment exposes mode, rule ID, reason, source fields, severity, owner, decision owner, next action, due date and audit evidence. No hidden scores. Sensitive changes are audited. Payment receipt creates reconciliation work. Closing review/escalation requires explicit named approval evidence. Demo data persists locally and can be reset. No secrets, real personal data or external sending.
